@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>小星球</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#0b0820;font-family:"PingFang SC","Noto Serif SC","Songti SC",serif;color:#fff4e0;touch-action:none}
+canvas{display:block}
+#title{position:fixed;top:5vh;width:100%;text-align:center;pointer-events:none;transition:opacity 2s}
+#title h1{margin:0;font-weight:300;letter-spacing:.6em;font-size:clamp(34px,7vw,64px);text-shadow:0 0 24px #ffb86b,0 0 60px #ff7a8a88;padding-left:.6em}
+#title p{margin:.6em 0 0;letter-spacing:.35em;font-size:clamp(12px,2.4vw,15px);opacity:.75}
+#hint{position:fixed;bottom:3vh;width:100%;text-align:center;font-size:13px;letter-spacing:.15em;opacity:.7;pointer-events:none}
+#line{position:fixed;left:50%;top:58%;transform:translate(-50%,10px);max-width:80vw;text-align:center;font-size:clamp(17px,3.6vw,24px);line-height:1.9;letter-spacing:.12em;opacity:0;transition:all 1.2s ease;pointer-events:none;text-shadow:0 0 18px #ff8fa3,0 2px 6px #000a;padding:18px 28px;border-radius:14px;background:radial-gradient(ellipse,#2a103566,transparent 70%)}
+#line.show{opacity:1;transform:translate(-50%,0)}
+#line small{display:block;font-size:.6em;opacity:.6;margin-top:.5em}
+#snd{position:fixed;top:16px;right:16px;background:#ffffff14;border:1px solid #ffffff30;color:#fff4e0;border-radius:20px;padding:6px 14px;font-size:13px;cursor:pointer;backdrop-filter:blur(6px)}
+</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head><body>
+<div id="title"><h1>小星球</h1><p>一颗只比房子大一点的星球</p></div>
+<div id="line"></div>
+<div id="hint">W A S D / 方向键 行走 · 手机拖动屏幕 · 走近或点击玫瑰</div>
+<button id="snd">♪ 声音：关</button>
+<script type="module" src="main.js"></script>
+</body></html>
